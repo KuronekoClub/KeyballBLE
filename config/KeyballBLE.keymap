@@ -48,8 +48,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &mkp LCLK                                  &kp AT         &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mkp RCLK                                  &kp MINUS      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&kp A             &kp S         &kp D         &kp F                   &kp G        &mkp LCLK                                  &mkp RCLK      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp LC(LEFT)                               &kp RC(RIGHT)  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LANG5  &lt 2 SPACE  &lt_to_layer_0 6 INT_KATAKANAHIRAGANA      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
@@ -67,10 +67,10 @@
 
         NUM {
             bindings = <
-&kp ESC               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET      &kp MINUS       &kp TILDE       &kp EQUAL  &kp LEFT_BRACKET
-&kp TAB               &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp PAGE_UP    &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &kp PERCENT
-&mt LEFT_SHIFT GRAVE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &mt RSHFT RIGHT_BRACKET
-&trans                &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                    &kp PIPE
+&kp ESC               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                 &kp CARET      &kp MINUS       &kp TILDE       &kp EQUAL  &kp LEFT_BRACKET
+&kp TAB               &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LS(TAB))               &kp RC(TAB)  &kp PAGE_UP    &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &kp PERCENT
+&mt LEFT_SHIFT GRAVE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp LG(NON_US_BACKSLASH)      &trans       &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &mt RSHFT RIGHT_BRACKET
+&kp RG(H)             &trans           &trans           &trans           &trans        &trans                        &trans       &trans                                                    &kp NON_US_BACKSLASH
             >;
         };
 
