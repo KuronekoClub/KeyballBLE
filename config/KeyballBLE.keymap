@@ -18,7 +18,7 @@
 
         double_quotation {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+            key-positions = <20 21 23>;
         };
     };
 
@@ -28,6 +28,13 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        GmeetAllmute: GmeetAllmute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(D) &kp LG(E)>;
+            label = "GMEETALLMUTE";
         };
     };
 
@@ -47,10 +54,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &mkp LCLK                                  &mkp RCLK      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp LC(LEFT)                               &kp RC(RIGHT)  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LANG5  &lt 2 SPACE  &lt_to_layer_0 6 INT_KATAKANAHIRAGANA      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E             &kp R                   &kp T                                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D             &kp F                   &kp G        &mkp LCLK                                  &mkp RCLK      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                   &kp B        &lt_to_layer_0 4 LC(LEFT_ARROW)            &kp RC(RIGHT)  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&kp LEFT_ALT      &kp LEFT_WIN  &kp LEFT_CONTROL  &lt_to_layer_0 1 LANG5  &lt 2 SPACE  &lt_to_layer_0 6 INT_KATAKANAHIRAGANA      &kp BACKSPACE  &lt 1 ENTER                             &kp BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -59,9 +66,9 @@
         FUNCTION {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                      &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
-&kp NUMBER_4  &kp N5        &kp NUMBER_6  &none         &none   &none      &kp F13  &kp F6        &kp F7  &kp F8  &kp F9  &kp F10
-&mt LSHFT N7  &kp N8        &kp N9        &none         &none   &none      &none    &none         &none   &none   &none   &mt LSHFT F11
-&none         &kp NUMBER_0  &none         &none         &none   &none      &none    &none                                 &kp F12
+&kp NUMBER_4  &kp N5        &kp NUMBER_6  &none         &none   &none      &kp F12  &kp F1        &kp F2  &kp F3  &kp F4  &kp F5
+&mt LSHFT N7  &kp N8        &kp N9        &none         &none   &none      &kp F11  &kp F6        &kp F7  &kp F8  &kp F9  &mt LSHFT F10
+&none         &kp NUMBER_0  &none         &none         &none   &none      &none    &none                                 &GmeetAllmute
             >;
         };
 
