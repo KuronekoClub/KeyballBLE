@@ -43,15 +43,21 @@
         GmeetAllmute: GmeetAllmute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(D) &kp LC(E)>;
+            bindings = <&kp LG(D) &kp LC(LG(E))>, <&macro_press>;
+
             label = "GMEETALLMUTE";
+            wait-ms = <500>;
+            tap-ms = <150>;
         };
 
         double_click: double_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp LCLK &mkp LCLK>;
+            bindings = <&mkp LCLK &mkp LCLK>, <&macro_press>;
+
             label = "DOUBLE_CLICK";
+            wait-ms = <500>;
+            tap-ms = <100>;
         };
     };
 
@@ -94,7 +100,7 @@
 &kp ESC               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                          &kp CARET      &kp MINUS       &kp TILDE       &kp EQUAL  &kp LEFT_BRACKET
 &kp TAB               &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LS(TAB))      &kp RC(TAB)    &kp PAGE_UP    &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &kp PERCENT
 &mt LEFT_SHIFT GRAVE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp LG(GRAVE)        &double_click  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &mt RSHFT RIGHT_BRACKET
-&kp RG(H)             &trans           &trans           &trans           &trans        &trans               &trans         &trans                                                    &mt RIGHT_ALT BACKSLASH
+&kp RG(H)             &trans           &trans           &trans           &trans        &trans               &trans         &trans                                                    &mt LEFT_META BACKSLASH
             >;
         };
 
