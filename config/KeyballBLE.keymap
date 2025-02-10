@@ -43,10 +43,10 @@
         GmeetAllmute: GmeetAllmute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(D)>;
-            label = "GMEETALLMUTE";
-            wait-ms = <500>;
-            tap-ms = <150>;
+            bindings = 
+                <&macro_press &kp LGUI>, <&macro_tap &kp D>, <&macro_release &kp LGUI>,
+                <&macro_wait_time 50>, // 少し待機
+                <&macro_press &kp LGUI>, <&macro_tap &kp E>, <&macro_release &kp LGUI>;
         };
 
         double_click: double_click {
