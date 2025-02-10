@@ -43,7 +43,7 @@
         GmeetAllmute: GmeetAllmute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(D) &kp LC(LG(E))>, <&macro_press>;
+            bindings = <&kp LG(D)>, <&macro_press>, <&kp LG(E)>;
 
             label = "GMEETALLMUTE";
             wait-ms = <500>;
@@ -53,7 +53,7 @@
         double_click: double_click {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp LCLK &mkp LCLK>, <&macro_press>;
+            bindings = <&mkp LCLK>, <&macro_press>, <&mkp LCLK>;
 
             label = "DOUBLE_CLICK";
             wait-ms = <500>;
