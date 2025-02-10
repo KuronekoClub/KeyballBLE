@@ -43,7 +43,7 @@
         GmeetAllmute: GmeetAllmute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(D) &kp LG(E)>;
+            bindings = <&kp LC(D) &kp LC(E)>;
             label = "GMEETALLMUTE";
         };
 
@@ -82,10 +82,10 @@
 
         FUNCTION {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                &kp NUMBER_6  &kp N7                &kp N8  &kp N9  &kp N0
-&kp NUMBER_4  &kp N5        &kp NUMBER_6  &none         &none   &none      &kp C_VOLUME_UP    &kp C_BRI_DN  &kp C_BRIGHTNESS_INC  &kp F3  &kp F4  &kp F5
-&mt LSHFT N7  &kp N8        &kp N9        &none         &none   &none      &kp C_VOLUME_DOWN  &kp F6        &kp F7                &kp F8  &kp F9  &mt LSHFT K_MUTE
-&none         &kp NUMBER_0  &none         &none         &none   &none      &none              &none                                               &GmeetAllmute
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                &kp NUMBER_6                  &kp N7  &kp N8  &kp N9  &kp N0
+&kp NUMBER_4  &kp N5        &kp NUMBER_6  &none         &none   &none      &kp C_VOLUME_UP    &kp LA(LC(C_BRIGHTNESS_INC))  &kp F2  &kp F3  &kp F4  &kp F5
+&mt LSHFT N7  &kp N8        &kp N9        &none         &none   &none      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC          &kp F7  &kp F8  &kp F9  &mt LSHFT K_MUTE
+&none         &kp NUMBER_0  &none         &none         &none   &none      &none              &none                                                 &GmeetAllmute
             >;
         };
 
@@ -94,7 +94,7 @@
 &kp ESC               &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                          &kp CARET      &kp MINUS       &kp TILDE       &kp EQUAL  &kp LEFT_BRACKET
 &kp TAB               &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LS(TAB))      &kp RC(TAB)    &kp PAGE_UP    &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &kp PERCENT
 &mt LEFT_SHIFT GRAVE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp LG(GRAVE)        &double_click  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &mt RSHFT RIGHT_BRACKET
-&kp RG(H)             &trans           &trans           &trans           &trans        &trans               &trans         &trans                                                    &kp NON_US_BACKSLASH
+&kp RG(H)             &trans           &trans           &trans           &trans        &trans               &trans         &trans                                                    &mt RIGHT_ALT BACKSLASH
             >;
         };
 
